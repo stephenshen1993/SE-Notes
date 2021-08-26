@@ -28,6 +28,8 @@ ShardingSphere-UI 是 ShardingSphere 的 web 管理控制台，通过注册中�
 
 ## 部署运行
 
+官方文档的部署运行里，是使用拉取 git 项目后本地编译再运行，此处我们只是体验功能，没必要再配置环境本地编译，直接下载编译好的软件包即可。
+
 1、获取安装包：https://mirrors.tuna.tsinghua.edu.cn/apache/shardingsphere/shardingsphere-ui-5.0.0-alpha/apache-shardingsphere-5.0.0-alpha-shardingsphere-ui-bin.tar.gz
 
 2、解压后运行 bin/start.sh
