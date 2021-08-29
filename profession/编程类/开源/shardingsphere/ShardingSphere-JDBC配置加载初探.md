@@ -77,9 +77,7 @@ spring.shardingsphere.rules.readwrite-splitting.data-sources.pr_ds.load-balancer
 
 #### 1、数据源加载
 
-打开 sharding-sphere 项目，使用 Find in Path 进行查找，只看 java 文件，只有 DataSourceMapSetter 一处非测试代码。
-
-![image-20210829060646845](https://gitee.com/stephenshen/pic-bed/raw/master/img/20210829060647.png)
+打开 sharding-sphere 项目，使用 Find in Path 进行查找，只看 java 文件，有且仅有 DataSourceMapSetter 一处是非测试代码。
 
 进入到 DataSourceMapSetter，先看到以下字段：
 
