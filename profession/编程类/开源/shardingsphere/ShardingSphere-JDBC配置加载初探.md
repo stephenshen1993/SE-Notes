@@ -75,7 +75,7 @@ spring.shardingsphere.rules.readwrite-splitting.data-sources.pr_ds.load-balancer
 
 ### 源码追踪
 
-#### 1、数据源加载
+#### 1、数据源加载过程
 
 打开 sharding-sphere 项目，使用 Find in Path 进行查找，只看 java 文件，有且仅有 DataSourceMapSetter 一处是非测试代码。
 
@@ -189,7 +189,7 @@ public class ShardingSphereAutoConfiguration implements EnvironmentAware {
 
 
 
-#### 2、规则加载
+#### 2、规则加载过程
 
 上面未解决的问题是：rules 从哪儿来的？
 
@@ -236,6 +236,10 @@ public class ReadwriteSplittingRuleSpringbootConfiguration {
 这里创建的 RuleConfiguration bean，将通过 ObjectProvider<List<RuleConfiguration>> 自动注入到 ShardingSphereAutoConfiguration#shardingSphereDataSource，从而完成创建 shardingSphereDataSource 的要素闭环。
 
 shardingSphereDataSource 是个聚合的数据源，内部持有所有的数据源信息和规则信息，对外包装成 dataSource bean 与应用进行交互。
+
+
+
+#### 3、数据源创建过程
 
 
 
